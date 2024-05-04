@@ -1,0 +1,374 @@
+body {
+    margin: 0;
+    box-sizing: border-box;
+}
+  
+/* Importamos fuente */
+  
+@font-face {
+    font-family: Noto;
+    src: url(../fonts/Noto/NotoSansDisplay-VariableFont_wdth\,wght.ttf);
+}
+  
+@font-face {
+    font-family: Ultra;
+    src: url(../fonts/Ultra/Ultra-Regular.ttf);
+}
+  
+
+/* Copiamos el estilo del menu de navegacion de la pagina de inicio*/
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    background-color: transparent;
+    background-color: rgba(232, 214, 185, 0.822);
+}
+  
+.abrirMenu {
+    font-weight: bold;
+    cursor: pointer;
+    margin: 3rem;
+    float: right;
+    font-size: 2.5rem;
+}
+  
+.cerrarMenu {
+    font-weight: bold;
+    cursor: pointer;
+    margin: 3rem;
+    float: right;
+    font-size: 2.9rem;
+}
+  
+.contenedorSanarte {
+    display: flex;
+    justify-content: space-between;
+    float: left;
+    margin: 0 0 0 2rem;
+}
+  
+.sanarte {
+    font-family: "Ultra";
+    margin: 4rem 1rem 2rem 4rem;
+    font-size: 3rem;
+    opacity: 0.8;
+    cursor: pointer;
+    transition: 0.5s;
+}
+  
+.sanarte:hover{
+    cursor: pointer;
+    opacity: 1;
+}
+  
+.slogan {
+    font-family: "Noto";
+    font-size: 1rem;
+    margin: 6rem 1rem 2rem 0;
+    color: rgba(0, 0, 0, 0.548);
+}
+  
+.menu {
+    background-color: rgb(232, 214, 185);
+    position: fixed;
+    top: 0;
+    right: -100%;
+    bottom: 0;
+    width: 100%;
+    text-align: right;
+    transition: 2.5s;
+    display: flex;
+    justify-content: space-between;
+    z-index: 1;
+}
+  
+.apareceMenu {
+    right: 0;
+}
+  
+a{
+    list-style: none;
+    text-decoration: none;
+    color: black;
+}
+
+.elementoLista {
+    padding: 2rem 0 0 3rem;
+    text-align: left;
+    list-style: none;
+    font-size: 1.5rem;
+    margin: 40px 0 0 20px;
+    cursor: pointer;
+    font-family: "Noto";
+    transition: 0.7s;
+}
+  
+.elementoLista:hover{
+    cursor: pointer;
+    font-weight: bold;   
+}
+
+/* Le damos estilo al titulo y subtitulo de la categoría
+Display grid al contenedor para facilitar la posicion de las obras 
+Estilo a las imagenes, botones y textos*/
+
+.main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url(../media/pinturacatmedia/plantafondo.jpg);
+}
+
+.titulo{
+    height: 10rem;
+    font-family: 'Noto';
+    font-size: 2.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+}
+
+.titulo:hover{
+    color: rgb(157, 167, 107);
+}
+
+.subtitulo{
+    height: 3rem;
+    font-family: 'Noto';
+    font-size: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(255, 255, 255);
+}
+
+.contenedor{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+    margin: 0 15rem 10rem 15rem;
+    height: auto; 
+    width: auto;
+}
+
+/* Le damos al contenedor de la imagen un hover, de tal modo que cuando pasemos el raton por encima se agrande */
+.contenedorImagen{
+    width: 20rem;
+    height: 30rem;
+    margin: 3rem;
+    position: relative;
+    transition: 0.5s;
+    object-fit: cover;
+}
+
+.contenedorImagen:hover{
+    transform: scale(1.05);
+}
+
+img{
+    width: 100%;
+    height: 90%;
+    cursor: pointer;
+    box-shadow: 0 8px 10px -4px rgba(0, 0, 0, .6);
+    border-radius: 0.35rem;
+}
+
+/* Le damos al texto una opacidad de 0 y un hover aumentando su opacidad hasta 1, 
+de tal manera que cuando pase el raton por encima aparezca este texto aparecerá */
+
+.texto{
+    background-color:rgba(255, 255, 255, 0.507) ;
+    font-family: 'Noto';
+    font-weight: bold;
+    bottom: 3rem;
+    position: absolute;
+    width: 100%;
+    height: 4rem;
+    text-align: center;
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.contenedorImagen:hover .texto {
+    opacity: 1;
+}
+
+p{
+    margin: 0;
+}
+
+/* Le damos al boton de añadir a favoritos color de fondo, sombre y hover cambiando esta sombra, 
+de esta manera cuando se pase el ratón por encima tendrá un efecto de seleccionado */
+
+.fav{
+    text-decoration: none;
+    font-family: 'Noto';
+    font-weight: bold;
+    font-size: 1rem;
+    border: none;
+    width: 100%;
+    height: 2rem;
+    cursor: pointer;
+    box-shadow: 0 8px 10px -4px rgba(0, 0, 0, .6);
+    border-radius: 0.5rem;
+    background-color: rgb(223, 223, 223);
+    margin: 1.5rem 0 0 0;
+}
+
+.fav:hover{
+    box-shadow: inset 0 8px 10px -4px rgba(0, 0, 0, .6);
+}
+
+
+/* Copiamos el estilo del footer de la pagina de inicio */
+.footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color:rgba(232, 214, 185, 0.822) ;
+    height: 10rem;
+    
+}
+
+.nombreFooter{
+    margin: 0 0 0 5rem;
+}
+
+#sanarteFooter{
+    font-family: 'Ultra';
+    font-size: 3rem;
+    margin: 0;
+    opacity: 0.8;
+    cursor: pointer;
+    transition: 0.7s;
+}
+
+#sanarteFooter:hover{
+    opacity: 1;
+    cursor: pointer;
+    font-size: 3.3rem;
+}
+
+#sloganFooter{
+    font-family: 'Noto';
+    margin: 0.3rem 0 0 0;
+}
+
+.menuFooter{
+    font-family: 'Noto';
+    margin: 2rem 20rem 0 0;
+}
+
+.elementoFooter{
+    cursor: pointer;
+    opacity: 0.7;
+    transition: 1s;
+}
+
+.elementoFooter:hover{
+    cursor: pointer;
+    opacity: 1;
+    font-weight: bold;
+}
+
+/* A continuación adaptamos el contenido a las distintas pantallas y así conseguir un diseño responsive */
+
+@media screen and (max-width: 1700px) {
+    .contenedor{
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0 5rem 0 5rem;
+    }
+
+    .contenedorImagen{
+        width: 15rem;
+        height: 25rem;
+    }
+} 
+
+@media screen and (max-width: 1200px) {
+    .contenedor{
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0 5rem 0 5rem;
+    }
+
+    .contenedorImagen{
+        width: 10rem;
+        height: 17rem;
+    }
+}
+
+@media screen and (max-width: 580px) {
+
+    .elementoLista {
+      padding: 1rem 0 0 2rem;
+      font-size: 1rem;
+    }
+  
+    .header{
+      height: 7rem;
+    }
+  
+    i{
+      font-size: 2rem;
+    }
+    .contenedorSanarte{
+      margin: 0;
+    }
+  
+    .sanarte{
+      font-size: 2rem;
+    }
+  
+    .slogan{
+      display: none;
+    }
+    
+    p{
+        transform: scale(0.8);
+    }
+    
+    .footer{
+      height: 7rem;
+    }
+    .nombreFooter{
+      margin: 1rem 0 1rem 1rem;
+    }
+  
+    #sanarteFooter{
+      font-size: 1.7rem;
+    }
+  
+    #sloganFooter{
+      font-size: 0.8rem;
+    }
+  
+    .menuFooter{
+      margin: 0 1rem 0 0;
+    }
+  
+    .elementoFooter{
+      font-size: 0.8rem;
+    }
+
+    .titulo{
+        font-size: 2rem;
+        height: auto;
+        margin: 1rem 0 0 0;
+    }
+
+    .subtitulo{
+        font-size: 0.8rem;
+        margin: 0 2rem 0 2rem;
+    }
+}
