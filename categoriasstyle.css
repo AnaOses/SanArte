@@ -1,0 +1,252 @@
+body {
+    margin: 0;
+    box-sizing: border-box;
+}
+  
+/* Importamos fuente */
+  
+@font-face {
+    font-family: Noto;
+    src: url(../fonts/Noto/NotoSansDisplay-VariableFont_wdth\,wght.ttf);
+}
+  
+@font-face {
+    font-family: Ultra;
+    src: url(../fonts/Ultra/Ultra-Regular.ttf);
+}
+  
+
+/* Copiamos el estilo del menu de navegacion de la pagina de inicio*/
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    background-color: transparent;
+    background-color: rgba(232, 214, 185, 0.822);
+}
+  
+.abrirMenu {
+    font-weight: bold;
+    cursor: pointer;
+    margin: 3rem;
+    float: right;
+    font-size: 2.5rem;
+}
+  
+.cerrarMenu {
+    font-weight: bold;
+    cursor: pointer;
+    margin: 3rem;
+    float: right;
+    font-size: 2.9rem;
+}
+  
+.contenedorSanarte {
+    display: flex;
+    justify-content: space-between;
+    float: left;
+    margin: 0 0 0 2rem;
+}
+  
+.sanarte {
+    font-family: "Ultra";
+    margin: 4rem 1rem 2rem 4rem;
+    font-size: 3rem;
+    opacity: 0.8;
+    cursor: pointer;
+    transition: 0.5s;
+}
+  
+.sanarte:hover{
+    cursor: pointer;
+    opacity: 1;
+}
+  
+.slogan {
+    font-family: "Noto";
+    font-size: 1rem;
+    margin: 6rem 1rem 2rem 0;
+    color: rgba(0, 0, 0, 0.548);
+}
+  
+.menu {
+    background-color: rgb(232, 214, 185);
+    position: fixed;
+    top: 0;
+    right: -100%;
+    bottom: 0;
+    width: 100%;
+    text-align: right;
+    transition: 2.5s;
+    display: flex;
+    justify-content: space-between;
+    z-index: 1;
+}
+  
+.apareceMenu {
+    right: 0;
+}
+  
+a{
+    list-style: none;
+    text-decoration: none;
+    color: black;
+}
+
+.elementoLista {
+    padding: 2rem 0 0 3rem;
+    text-align: left;
+    list-style: none;
+    font-size: 1.5rem;
+    margin: 40px 0 0 20px;
+    cursor: pointer;
+    font-family: "Noto";
+    transition: 0.7s;
+}
+  
+.elementoLista:hover{
+    cursor: pointer;
+    font-weight: bold;   
+}
+
+/* Le damos estilo a los textos de las categorías */
+
+.contenedorCategorias{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url(../media/hojasbyn.jpg);
+}
+
+.categoria{
+    font-family: 'Noto';
+    font-weight: bold;
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
+    transition: 1s;
+}
+
+.categoria:hover{
+    font-weight: bold;
+}
+
+
+/* Copiamos el estilo del footer de la pagina de inicio */
+.footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color:rgba(232, 214, 185, 0.822) ;
+    height: 10rem;
+    
+}
+
+.nombreFooter{
+    margin: 0 0 0 5rem;
+}
+
+#sanarteFooter{
+    font-family: 'Ultra';
+    font-size: 3rem;
+    margin: 0;
+    opacity: 0.8;
+    cursor: pointer;
+    transition: 0.7s;
+}
+
+#sanarteFooter:hover{
+    opacity: 1;
+    cursor: pointer;
+    font-size: 3.3rem;
+}
+
+#sloganFooter{
+    font-family: 'Noto';
+    margin: 0.3rem 0 0 0;
+}
+
+.menuFooter{
+    font-family: 'Noto';
+    margin: 2rem 20rem 0 0;
+}
+
+.elementoFooter{
+    cursor: pointer;
+    opacity: 0.7;
+    transition: 1s;
+}
+
+.elementoFooter:hover{
+    cursor: pointer;
+    opacity: 1;
+    font-weight: bold;
+}
+
+@media screen and (max-width: 580px) {
+
+    .elementoLista {
+      padding: 1rem 0 0 2rem;
+      font-size: 1rem;
+    }
+  
+    .header{
+      height: 7rem;
+    }
+  
+    i{
+      font-size: 2rem;
+    }
+    .contenedorSanarte{
+      margin: 0;
+    }
+  
+    .sanarte{
+      font-size: 2rem;
+    }
+  
+    .slogan{
+      display: none;
+    }
+    
+    p{
+       transform: scale(0.8);
+    }
+    
+    .footer{
+      height: 7rem;
+    }
+    .nombreFooter{
+      margin: 1rem 0 1rem 1rem;
+    }
+  
+    #sanarteFooter{
+      font-size: 1.7rem;
+    }
+  
+    #sloganFooter{
+      font-size: 0.8rem;
+    }
+  
+    .menuFooter{
+      margin: 0 1rem 0 0;
+    }
+  
+    .elementoFooter{
+      font-size: 0.8rem;
+    }
+
+    .contenedorCategorias{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .categoria{
+        font-size: 2rem;
+    }
+
+}
